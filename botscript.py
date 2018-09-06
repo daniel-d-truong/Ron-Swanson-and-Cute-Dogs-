@@ -18,6 +18,12 @@ api = tp.API(auth)
 
 # getting ron quotes as json
 ron_url = 'http://ron-swanson-quotes.herokuapp.com/v2/quotes/50'
+ron_quotes_list = []
 
-page = requests.get(ron_url)
-print (page.json())
+def GetRonQuotes():
+    page = requests.get(ron_url)
+    ron_quotes_list = json.loads(page.text)
+    # print (page.json())
+    print ron_quotes_list
+
+GetRonQuotes()
