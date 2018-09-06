@@ -1,7 +1,9 @@
 import tweepy as tp
 import time
 import os
-from hidden-api-key import API_KEYS
+import requests
+import urllib, json
+from hiddenkey import API_KEYS
 
 # credentials to login to twitter api
 consumer_key = API_KEYS["consumer_key"]
@@ -14,9 +16,8 @@ auth = tp.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_secret)
 api = tp.API(auth)
 
-os.chdir('models')
+# getting ron quotes as json
+ron_url = 'http://ron-swanson-quotes.herokuapp.com/v2/quotes/50'
 
-# iterates over pictures in models folder
-for model_image in os.listdir('.'):
-    api.update_with_media(model_image)
-    time.sleep(3)
+page = requests.get(ron_url)
+print (page.json())

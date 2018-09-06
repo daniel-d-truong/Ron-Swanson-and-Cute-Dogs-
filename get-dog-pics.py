@@ -3,9 +3,10 @@
 import requests
 from bs4 import BeautifulSoup as bs
 import os
+import urllib, json
 
 # website with model images
-url = 'https://www.pexels.com/search/model/'
+url = 'http://ron-swanson-quotes.herokuapp.com/v2/quotes/50'
 
 # download page for parsing
 page = requests.get(url)
@@ -36,5 +37,3 @@ for image in image_tags:
                 x += 1
     except:
         pass
-
-
