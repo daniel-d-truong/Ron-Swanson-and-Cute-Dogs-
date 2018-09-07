@@ -1,4 +1,3 @@
-# Ron-Swanson-and-Cute-Dogs
 
 <h1> Ron Swanson Quotes and Cute Dogs Twitter Bot </h1>
 <p> If you love Parks and Rec, you'll love this. This is a twitter bot I have designed to post famous quotes by Ron Swanson along with Cute Dog Pictures! (Oh the irony) Right now, this only works locally on a machine, however in the future I will get this hosted on a website so that the twitter bot could post every 12 hours. </p>
