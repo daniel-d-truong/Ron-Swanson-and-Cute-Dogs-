@@ -33,7 +33,7 @@ x = 0
 for img_url in list_photos_urls:
     try:
         urllib.urlretrieve(img_url, "dog-"+str(x)+".jpg")
-
+        x+=1
         # response = requests.get(url)
         # if response.status_code == 200: #if there is a response from that url
         #     with open('dog-' + str(x) + '.jpg', 'wb') as f:
@@ -42,4 +42,3 @@ for img_url in list_photos_urls:
         #         x += 1
     except:
         pass
-    x+=1

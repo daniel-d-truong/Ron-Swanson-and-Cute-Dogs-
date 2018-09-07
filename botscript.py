@@ -29,6 +29,8 @@ api.update_with_media("dog-0.jpg", status=ron_quotes_list[ron_index])
 for dog_image in os.listdir('.'):
     # api.update_status(str(ron_quotes_list[ron_index]))
     # upload = api.media_upload(filename=dog_image)
-    api.update_with_media(dog_image, status=str(ron_quotes_list[ron_index]))
+    api.update_with_media(dog_image, status=(ron_quotes_list[ron_index]))
     ron_index+=1
-    time.sleep(3)
+    time.sleep(30)
+
+print ("Script Success!")
