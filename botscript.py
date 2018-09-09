@@ -36,6 +36,16 @@ for dog_image in os.listdir('.'):
     ron_index+=1
     time.sleep(30)
 
+reload(getDogPics)
+
+for dog_image in os.listdir('.'):
+    # api.update_status(str(ron_quotes_list[ron_index]))
+    # upload = api.media_upload(filename=dog_image)
+    string = ron_quotes_list[ron_index] + hashtag
+    api.update_with_media(dog_image, status=(string))
+    ron_index+=1
+    time.sleep(30)
+
 print ("Script Success!")
 
 os.chdir("..")
