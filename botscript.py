@@ -5,7 +5,7 @@ import requests
 import urllib, json
 import getDogPics
 import shutil
-import pause
+
 from getRonQuotes import ron_quotes_list
 from hiddenkey import API_KEYS
 
@@ -37,7 +37,7 @@ while (True):
         api.update_with_media(dog_image, status=(string))
         ron_index+=1
         print ("Script Success!")
-        pause.minute(1)
+        time.sleep(60)
     print ("Reached end of list")
     os.chdir("..")
     print ("Moved back to project directory")
