@@ -2,7 +2,7 @@ certifi==2018.8.24
 chardet==3.0.4
 idna==2.7
 oauthlib==2.1.0
-PinguyBuilder-gtk==4.3.post3
+
 pycrypto==2.6.1
 PySocks==1.6.8
 python-apt==1.1.0b1+ubuntu0.16.4.2
