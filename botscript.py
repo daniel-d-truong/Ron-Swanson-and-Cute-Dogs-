@@ -6,10 +6,9 @@ import urllib, json
 import getDogPics
 import shutil
 from getRonQuotes import ron_quotes_list
-from boto.s3.connection import S3Connection
+from hiddenkey import API_KEYS
 
-
-API_KEYS = S3Connection(os.environ['S3_KEY'], os.environ['S3_SECRET'])
+PATH = "/home/daniel/csProjects/twitBotRonDogs"
 # credentials to login to twitter api
 consumer_key = API_KEYS["consumer_key"]
 consumer_secret = API_KEYS["consumer_secret"]
@@ -27,7 +26,7 @@ print (os.listdir('.'))
 # iterates over pictures in models folder
 ron_index = 0
 hashtag = " #ronswansonquotes"
-
+api.update_with_media("dog-0.jpg", status=ron_quotes_list[ron_index])
 
 # iterates over lists and tweets quote and picture
 for dog_image in os.listdir('.'):
