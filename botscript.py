@@ -37,7 +37,7 @@ while (True):
         api.update_with_media(dog_image, status=(string))
         ron_index+=1
         print ("Script Success!")
-        pause.minutes(1)
+        pause.hours(12)
     print ("Reached end of list")
     os.chdir("..")
     print ("Moved back to project directory")

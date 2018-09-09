@@ -6,7 +6,7 @@ import urllib, json
 
 # website with model images
 # url = 'https://dog.ceo/api/breeds/image/random/5', old dog API
-url = "https://api.thedogapi.co.uk/v2/dog.php?limit=1"
+url = "https://api.thedogapi.co.uk/v2/dog.php?limit=50"
 
 # download page for parsing
 page = requests.get(url)

@@ -5,7 +5,7 @@ import os
 import urllib, json
 
 
-ron_url = 'http://ron-swanson-quotes.herokuapp.com/v2/quotes/1' #gets 50 quotes
+ron_url = 'http://ron-swanson-quotes.herokuapp.com/v2/quotes/50' #gets 50 quotes
 ron_quotes_list = []
 
 page = requests.get(ron_url)
