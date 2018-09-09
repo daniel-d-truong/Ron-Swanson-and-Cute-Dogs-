@@ -28,28 +28,22 @@ ron_index = 0
 hashtag = " #ronswansonquotes"
 
 # iterates over lists and tweets quote and picture
-for dog_image in os.listdir('.'):
-    # api.update_status(str(ron_quotes_list[ron_index]))
-    # upload = api.media_upload(filename=dog_image)
-    string = ron_quotes_list[ron_index] + hashtag
-    api.update_with_media(dog_image, status=(string))
-    ron_index+=1
-    time.sleep(30)
-
-reload(getDogPics)
-
-ron_index = 0
-for dog_image in os.listdir('.'):
-    # api.update_status(str(ron_quotes_list[ron_index]))
-    # upload = api.media_upload(filename=dog_image)
-    string = ron_quotes_list[ron_index] + hashtag
-    api.update_with_media(dog_image, status=(string))
-    ron_index+=1
-    time.sleep(30)
-
-print ("Script Success!")
-
-os.chdir("..")
-print (os.listdir('.'))
-shutil.rmtree("./dogs")
-print (os.listdir('.'))
+while (True):
+    for dog_image in os.listdir('.'):
+        # api.update_status(str(ron_quotes_list[ron_index]))
+        # upload = api.media_upload(filename=dog_image)
+        string = ron_quotes_list[ron_index] + hashtag
+        api.update_with_media(dog_image, status=(string))
+        ron_index+=1
+        print ("Script Success!")
+        pause.minute(1)
+    print ("Reached end of list")
+    os.chdir("..")
+    print ("Moved back to project directory")
+    shutil.rmtree("./dogs")
+    print ("Removed dogs folder")
+    reload(getDogPics)
+    print ("Reloaded on new dog pics")
+    reload(getRonQuotes)
+    print ("Reloaded getRonQuotes")
+    print (ron_quotes_list)
