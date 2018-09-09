@@ -5,6 +5,7 @@ import requests
 import urllib, json
 import getDogPics
 import shutil
+import pause
 from getRonQuotes import ron_quotes_list
 from hiddenkey import API_KEYS
 
