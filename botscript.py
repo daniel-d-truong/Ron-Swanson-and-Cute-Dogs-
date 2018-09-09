@@ -5,8 +5,8 @@ import requests
 import urllib, json
 import getDogPics
 import shutil
-
-from getRonQuotes import ron_quotes_list
+import pause
+import getRonQuotes
 from hiddenkey import API_KEYS
 
 PATH = "/home/daniel/csProjects/twitBotRonDogs"
@@ -33,11 +33,11 @@ while (True):
     for dog_image in os.listdir('.'):
         # api.update_status(str(ron_quotes_list[ron_index]))
         # upload = api.media_upload(filename=dog_image)
-        string = ron_quotes_list[ron_index] + hashtag
+        string = getRonQuotes.ron_quotes_list[ron_index] + hashtag
         api.update_with_media(dog_image, status=(string))
         ron_index+=1
         print ("Script Success!")
-        time.sleep(60)
+        pause.hours(1)
     print ("Reached end of list")
     os.chdir("..")
     print ("Moved back to project directory")
