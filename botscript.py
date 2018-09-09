@@ -48,3 +48,4 @@ while (True):
     reload(getRonQuotes)
     print ("Reloaded getRonQuotes")
     print (getRonQuotes.ron_quotes_list)
+    ron_index = 0
