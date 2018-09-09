@@ -38,6 +38,7 @@ for dog_image in os.listdir('.'):
 
 reload(getDogPics)
 
+ron_index = 0
 for dog_image in os.listdir('.'):
     # api.update_status(str(ron_quotes_list[ron_index]))
     # upload = api.media_upload(filename=dog_image)
