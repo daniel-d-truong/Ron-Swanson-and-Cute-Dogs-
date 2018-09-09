@@ -26,7 +26,6 @@ print (os.listdir('.'))
 # iterates over pictures in models folder
 ron_index = 0
 hashtag = " #ronswansonquotes"
-api.update_with_media("dog-0.jpg", status=ron_quotes_list[ron_index])
 
 # iterates over lists and tweets quote and picture
 for dog_image in os.listdir('.'):
