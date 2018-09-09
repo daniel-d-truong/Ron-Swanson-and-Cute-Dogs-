@@ -47,4 +47,4 @@ while (True):
     print ("Reloaded on new dog pics")
     reload(getRonQuotes)
     print ("Reloaded getRonQuotes")
-    print (ron_quotes_list)
+    print (getRonQuotes.ron_quotes_list)
